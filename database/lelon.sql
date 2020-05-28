@@ -100,7 +100,6 @@ CREATE TABLE `pengguna` (
   `hp` varchar(20) NOT NULL,
   `age` int(2) NOT NULL,
   `work` text NOT NULL,
- 
   `alamat` text NOT NULL,
   `gender` varchar(35) NOT NULL,
   `foto` text NOT NULL,
