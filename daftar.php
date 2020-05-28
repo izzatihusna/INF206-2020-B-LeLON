@@ -46,18 +46,7 @@
 				<a href="daftar_penjual.php">
 				<button type="submit" class="btn btn-primary btn-md btn-block">DAFTAR PENJUAL</button>
 				</a>
-				<!-- <form method="post" action="aksi_daftar.php" ><br>
-					<div class="form-group">
-						<input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama" required>
-					</div>
-					<div class="form-group">
-						<input type="email" class="form-control" id="email1" name="email" aria-describedby="emailHelp" placeholder="Email" required>
-					</div>
-					<div class="form-group">
-						<input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
-					</div>
-					<button type="submit" class="btn btn-primary btn-md btn-block">DAFTAR</button>
-				</form> --></center>
+				</center>
 			</div>
 			<div class="col-lg">
 			</div>
