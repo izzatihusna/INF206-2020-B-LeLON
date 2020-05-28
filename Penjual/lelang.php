@@ -5,9 +5,7 @@ include "../koneksi.php";
 $sid	= $_SESSION['id'];
 $slevel	= $_SESSION['level'];
 
-
 if($slevel=="Penjual"){
-
 
 	$data1  = mysqli_query($koneksi,"select * from pengguna where id='$sid'"); 
 	$ambil1 = mysqli_fetch_array($data1);
@@ -43,7 +41,6 @@ if($slevel=="Penjual"){
 				<a href="keluar.php">
 				<button type="button" class="btn btn-outline-info my-2 ml-3 mr-4"><?php echo $ambil1['nama']; ?></button>
 			</a>
-
 			</div>
 		</nav>
 
@@ -55,7 +52,6 @@ if($slevel=="Penjual"){
 					echo "<br><br><div class='alert alert-danger' role='alert'>
 					<h4 class='alert-heading'>Berhasil Dihapus!</h4>
 					</div>";
-
 				}else if($_GET['status'] == "memilih"){
 					$id_t   = $_GET['terpilih'];
 					$data4  = mysqli_query($koneksi,"select * from penawaran where id=$id_t"); 
@@ -66,7 +62,6 @@ if($slevel=="Penjual"){
 					?>
 
 					<div class="row">
-						
 						<div class="col-12">
 							<center>
 								<h1><b>ANDA TELAH MEMILIH</b></h1><br>
@@ -90,8 +85,7 @@ if($slevel=="Penjual"){
 						</div>
 					</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-					<?php
-
+			<?php
 				}else{
 
 				}
@@ -99,7 +93,6 @@ if($slevel=="Penjual"){
 			?>
 
 			<?php
-
 			$sql = "SELECT * FROM barang where id_pengguna=$sid ORDER BY id Desc";
 			$result = $koneksi->query($sql);
 
@@ -114,8 +107,6 @@ if($slevel=="Penjual"){
 						</div>
 						<div class="col-8">
 							
-
-
 							<?php
 							if($row['terpilih']==0){
 								?>
@@ -157,12 +148,9 @@ if($slevel=="Penjual"){
 									<button class="btn btn-outline-info btn-md">Batalkan Lelang</button>
 								</a>
 
-
-
-
-								<?php
+							<?php
 							}else{
-								?>
+							?>
 								<h3>Pelelang Terpilih :</h3><br>
 
 								<table>
@@ -175,7 +163,6 @@ if($slevel=="Penjual"){
 
 									if ($result2->num_rows > 0) { 
 										while($row2 = $result2->fetch_assoc()){
-
 											$data2  = mysqli_query($koneksi,"select * from pengguna where id=$row2[id_pembeli]"); 
 											$ambil2 = mysqli_fetch_array($data2);
 											?>
@@ -187,7 +174,6 @@ if($slevel=="Penjual"){
 												<th>&nbsp;</th>
 												<th align="right">
 													&nbsp;
-
 												</th>
 											</tr>
 											<?php
@@ -199,13 +185,6 @@ if($slevel=="Penjual"){
 							}
 							?>
 
-
-
-
-
-
-
-							
 						</div>
 					</div><hr><br>
 					<?php
